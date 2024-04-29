@@ -2,7 +2,7 @@ from tinyws import Webview
 import pathlib
 
 script_dir = pathlib.Path(__file__).parent.resolve()
-wv = Webview(inspect=True, decorated=False, transparent=True, size=(512, 512), html="""
+wv = Webview(window_type=4, decorated=False, transparent=True, size=(512, 512), html="""
 
 <!DOCTYPE HTML>
 <html>

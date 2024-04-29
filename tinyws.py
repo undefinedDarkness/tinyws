@@ -106,7 +106,7 @@ class Webview:
         self.webucm.connect(f"script-message-received::{name}", lambda _, x: onmessage(jsv_to_primitive(x.get_js_value())))
 
 
-    def __init__(self, window_type_hint=Gdk.WINDOW_TYPE_HINT_NORMAL, inspect=False, transparent=False, html=None, forward_console=True, window_css="", persistent=None, decorated=True, exit_on_window_close=True, title="Webview", visible=True, url=None, window_type=Gdk.WindowTypeHint.DIALOG, position=Gtk.WindowPosition.CENTER, size=(800, 600)):
+    def __init__(self, inspect=False, transparent=False, html=None, forward_console=True, window_css="", persistent=None, decorated=True, exit_on_window_close=True, title="Webview", visible=True, url=None, window_type=Gdk.WindowTypeHint.DIALOG, position=Gtk.WindowPosition.CENTER, size=(800, 600)):
         self.window = Gtk.Window(title=title, type_hint=window_type, decorated=decorated)
         self.window.set_position(position)
         self.window.set_default_size(size[0], size[1])
